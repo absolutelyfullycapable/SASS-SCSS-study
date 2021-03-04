@@ -1,0 +1,6 @@
+.btn1 { display: block; width: 200px; height: 50px; line-height: 50px; text-align: center; font-size: 30px; color: #c9c9c9; background-color: #fff; border: 1px solid #c9c9c9; text-decoration: none; }
+.btn1:hover { background-color: #c9c9c9; color: #fff; }
+
+.btn2 { display: block; padding: 10px; font-size: 30px; border: 1px solid #ffb7c8; background-color: #b7ddff; color: #c9c9c9; }
+
+/*# sourceMappingURL=index.css.map */

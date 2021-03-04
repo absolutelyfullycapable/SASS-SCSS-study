@@ -1,0 +1,11 @@
+$gray: #c9c9c9;
+$white: #fff;
+$blue: #b7ddff;
+$pink: #ffb7c8;
+$fs30: 30px;
+
+.btn1 { display: block; width: 200px; height: 50px; line-height: 50px; text-align: center; font-size: $fs30; color: $gray; background-color: $white; border: 1px solid $gray; text-decoration: none; 
+    &:hover { background-color: $gray; color: $white; }
+}
+
+.btn2 { display: block; padding: 10px; font-size: $fs30; border: 1px solid $pink; background-color: $blue; color: $gray; }
