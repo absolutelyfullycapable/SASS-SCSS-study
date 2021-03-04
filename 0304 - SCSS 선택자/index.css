@@ -1,0 +1,12 @@
+img { width: 400px; }
+
+.box { color: #eee; }
+.box ul { border: 1px solid #000; }
+.box ul > li { background-color: #ffb5b5; }
+.box ul > li a { text-decoration: none; }
+.box ul > li a:hover { color: #fff; }
+.box ul > li a.test { font-size: 20px; }
+.box ul > li .test { font-style: italic; }
+.box ul > li:last-child { font-weight: bold; }
+
+/*# sourceMappingURL=index.css.map */

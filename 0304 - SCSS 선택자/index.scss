@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+img { width: 400px; }
+
+.box { color: #eee;
+    ul { border: 1px solid #000;
+        > li { background-color:#ffb5b5;
+            a { text-decoration: none;
+                &:hover { color: #fff; }
+                &.test { font-size: 20px; }
+            }
+        .test { font-style: italic; }
+        &:last-child { font-weight: bold; }
+        }
+    }
+}
