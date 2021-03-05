@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <title>SCSS @extend</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <!-- @extend -->
+        <h2>SCSS @extend</h2>
+        <ul>
+            <li>
+                한꺼번에 묶어 주는 역할을 해 줌<br>
+                <img src="ex_img.png" alt="ex img">
+            </li>
+            <li>작성 방법: %이름 { }</li>
+            <li>
+                <span>@mixin과 @extend의 공통점과 차이점</span>
+                <ul>
+                    <li>공통점: 미리 설정된 것을 삽입하는 용도는 같음</li>
+                    <li>
+                        <span>차이점</span>
+                        <ul>
+                            <li>@mixin: 원하는 선택자 안에 삽입, <strong>소스코드의 중복을 막기 위해 사용</strong></li>
+                            <li>@extend: 쉼표 구분으로 구분됨, <strong>연관성 있는 규칙에 만들기 위해 사용</strong></li>
+                        </ul>
+                    </li>
+                    <li>@extend보다 @mixin 쓰는 걸 더 권장</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- 예시 1 -->
+        <div class="ex1">test 1</div>
+        <div class="ex2">test 2</div>
+        <div class="ex3">test 3</div>
+
+        <!-- 예시 2 -->
+        <div class="visual">
+            <div></div>
+        </div>
+        <div class="main">
+            <div></div>
+        </div>
+        <div class="footer">
+            <div></div>
+        </div>
+    </body>
+</html>
