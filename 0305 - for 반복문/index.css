@@ -1,0 +1,24 @@
+@charset "UTF-8";
+.list li.ico1 { background-image: url(img/ico1.png); }
+
+.list li:nth-child(1)::before { content: "제목 1: "; }
+
+.list li.ico2 { background-image: url(img/ico2.png); }
+
+.list li:nth-child(2)::before { content: "제목 2: "; }
+
+.list li.ico3 { background-image: url(img/ico3.png); }
+
+.list li:nth-child(3)::before { content: "제목 3: "; }
+
+.list li.ico4 { background-image: url(img/ico4.png); }
+
+.list li:nth-child(4)::before { content: "제목 4: "; }
+
+.list li.ico5 { background-image: url(img/ico5.png); }
+
+.list li:nth-child(5)::before { content: "제목 5: "; }
+
+.list li { text-indent: 30px; background: no-repeat 0 0 / 20px auto; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+@for $num from 1 to 6 {
+    .list li.ico#{$num} { background-image: url(img/ico#{$num}.png); }
+    .list li:nth-child(#{$num})::before { content: '제목 #{$num}: '; }
+}
+.list li { text-indent: 30px; background: no-repeat 0 0 / 20px auto; }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <title>SCSS for 반복문</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <!-- for 반복문 -->
+        <h2>SCSS for 반복문</h2>
+        <ul>
+            <li>SCSS에서 쓰는 for 반복문과 자바스크립트에서 쓰는 for 반복문은 같은 반복문이기는 하지만 사용 방법이 조금 다름 (기본 개념은 같지만 활용할 수 있는 범위가 다름)</li>
+            <li>
+                <span>작성 방법: @for $변수명 from 시작 번호 to 끝 번호+1 => 끝 번호에 +1 하는 이유는 to가 끝 번호 <strong>미만</strong>까지만 범위를 설정하기 때문!</span>
+                <ul>
+                    <li>ex) @for $num from 1 to 6 =>  1부터 5까지</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- 예시 -->
+        <ol class="list">
+            <li class="ico1">텍스트 1</li>
+            <li class="ico2">텍스트 2</li>
+            <li class="ico3">텍스트 3</li>
+            <li class="ico4">텍스트 4</li>
+            <li class="ico5">텍스트 5</li>
+        </ol>
+    </body>
+</html>
