@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+@mixin bx($position, $px, $color) { border-#{$position}: $px solid $color; }
+$bx: box;
+
+div.#{$bx} { border: 1px solid steelblue; }
+.ex2 { @include bx(right, 2px, #999); }
+p { @include bx(bottom, 5px, #eee) }
