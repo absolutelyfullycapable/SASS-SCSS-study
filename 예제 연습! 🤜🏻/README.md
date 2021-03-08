@@ -4,4 +4,4 @@
 
 ### list
 
-- 0308: JYP Entertainment 포트폴리오 회사 소개 페이지 PC  재구현
+- 0308: JYP Entertainment 포트폴리오 회사 소개 페이지 PC  재구현 (1920 x 1080 최적화)
