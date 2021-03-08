@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+// 변수 및 @mixin
+$jypBlue1: #348ccc;
+$jypBlue2: #0063e6;
+
+@mixin clear {
+    &::after { content: ''; display: block; clear: both; }
+}
+@mixin bg($x, $y, $fill) { background: no-repeat $x $y / $fill; }
+@mixin position($x, $y) { position: absolute; left: $x; top: $y;
+    @if $x == 50% and $y == 50% {
+        transform: translate(-50%, -50%);
+    } @else if $x == 50% {
+        transform: translateX(-50%);
+    } @else if $y == 50% {
+        transform: translateY(-50%);
+    }
+}
+@mixin width { width: 100%; max-width: 1640px; margin: 0 auto; }
+@mixin engFont($weight, $size, $color) { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif; font-weight: $weight; font-size: $size; color: $color; }
+@mixin infoLine { position: relative;
+   &::after { content: ''; display: block; width: 85px; height: 1px; background-color: $jypBlue2; @include position(50%, -140px); }
+}
+
+/* ========== common ========== */
+body { line-height: 1.5; letter-spacing: -1px; font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif; }
+a { text-decoration: none; }
+span { @include engFont(400, 20px, #000); }
+.container, header, main, footer { width: 100%; }
+
+/* ========== header ========== */
+header { height: 50px; padding: 5px 0; background-color: rgba(255, 255, 255, 0.8); position: fixed; top: 0; left: 0; z-index: 1;
+    .header_wrap { display: flex; align-items: center; @include width;
+        h1 { width: 48px; height: 48px; margin-right: 74px;
+            a { display: block; width: 100%; height: 100%; @include bg(50%, 50%, cover); background-image: url(../img/header_logo.png); text-indent: -9999px; }
+        }
+        .gnb, .lang { @include clear(); }
+        .lang { margin-left: auto; }
+        .gnb li { float: left; width: 140px; text-align: center;
+            a { @include engFont(600, 14px, #000); transition: 0.2s;
+                &:hover { color: $jypBlue1; }
+            }
+        }
+        .lang li { float: left;
+            &::after { content: '|'; display: inline; margin: 0 10px; font-size: 12px; }
+            &:last-child::after { content: none; }
+            a { @include engFont(400, 12px, #000); }
+            .active { @include engFont(600, 12px, $jypBlue1); }
+        }
+    }
+}
+
+/* ========== main ========== */
+main { font-size: 20px;
+    .main_visual { width: 100%; height: 612px; @include bg(50%, 50%, cover); background-image: url(../img/sub_main_visual.jpg); position: relative;
+        h2 { border-bottom: 2px solid #fff; text-align: center; @include position(50%, 50%); @include engFont(800, 80px, #fff); }
+    }
+
+    .info_wrap { padding: 170px 0; font-size: 20px; text-align: center; @include width;
+        .info_area1 {
+            h3 { margin-bottom: 95px; font-size: 50px; @include engFont(800, 50px, $jypBlue2); @include bg(50%, 0, 730px auto); background-image: url(../img/h2_bg.png); }
+            .motto { margin: 140px 0; display: flex; justify-content: center; align-items: center;
+                div { width: 300px; height: 300px; border: 1px solid $jypBlue2; border-radius: 50%; display: flex; flex-direction: column; justify-content: center;
+                    &:nth-child(2) { margin: 0 60px; }
+                    h4 { @include engFont(600, 25px, #000); }
+                    p { margin-top: 10px; }
+                }
+            }
+        }
+        .info_area2 { margin: 280px 0; @include infoLine;
+            p:nth-of-type(2) { margin: 100px 0; }
+        }
+        .info_area3 { @include infoLine;
+            img { display: block; width: 270px; margin: 200px auto 0; }
+        }
+    }
+}
+
+/* ========== footer ========== */
+footer { width: 100%; background-color: #f9f9f9; padding: 50px 0;
+    .footer_wrap { @include width;
+        .fnb { @include clear;
+            li { float: left; color: $jypBlue2;
+                &:first-child { margin-right: 20px; }
+            }
+        }
+        p:first-of-type { margin: 20px 0;
+            span { @include engFont(400, 15px, #000);
+                em { color: $jypBlue2; }
+            }
+        }
+        p:last-of-type { color: rgb(136, 136, 136);
+            span { @include engFont(null, 16px, rgb(136, 136, 136)); }
+        }
+        .pf { margin-top: 20px; @include clear;
+            li { float: left;
+                &:first-child { margin-right: 20px; }
+                a { color:rgb(136, 136, 136); }
+            }
+        }
+    }
+}
