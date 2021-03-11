@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/*
+@mixin center($wd) { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: $wd; }
+
+div { @include center(500px); height: 200px; border: 1px solid steelblue; }
+*/
+
+@mixin position($x, $y,$z, $wd) { position: absolute; left: $x; top: $y; z-index: $z; width: $wd;
+    @if $x == 50% and $y == 50% {
+        transform: translate(-50%, -50%);
+    } @else if $x == 50% {
+        transform: translatX(-50%);
+    } @else if $y == 50% {
+        transform: translateY(-50%);
+    }
+}
+
+div { @include position(50%, 50%, 2, 500px); height: 200px; border: 1px solid steelblue; }

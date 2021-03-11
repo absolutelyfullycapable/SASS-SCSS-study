@@ -1,0 +1,8 @@
+/*
+@mixin center($wd) { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: $wd; }
+
+div { @include center(500px); height: 200px; border: 1px solid steelblue; }
+*/
+div { position: absolute; left: 50%; top: 50%; z-index: 2; width: 500px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); height: 200px; border: 1px solid steelblue; }
+
+/*# sourceMappingURL=index.css.map */
