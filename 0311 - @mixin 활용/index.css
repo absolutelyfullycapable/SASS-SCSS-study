@@ -1,0 +1,9 @@
+.box { border: 1px solid #000; background-color: #eee; }
+.box::after { content: ''; display: block; clear: both; }
+.box > div { float: left; }
+
+.txt { width: 200px; overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap; }
+
+.btn { width: 100px; height: 55px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; text-overflow: ellipsis; }
+
+/*# sourceMappingURL=index.css.map */
